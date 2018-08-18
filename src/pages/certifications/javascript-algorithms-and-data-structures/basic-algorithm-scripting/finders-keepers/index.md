@@ -3,8 +3,28 @@ title: Finders Keepers
 ---
 ## Finders Keepers
 
-This is a stub. <a href='https://github.com/freecodecamp/guides/tree/master/src/pages/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/finders-keepers/index.md' target='_blank' rel='nofollow'>Help our community expand it</a>.
-
-<a href='https://github.com/freecodecamp/guides/blob/master/README.md' target='_blank' rel='nofollow'>This quick style guide will help ensure your pull request gets accepted</a>.
+## Basic Solution
 
 <!-- The article goes here, in GitHub-flavored Markdown. Feel free to add YouTube videos, images, and CodePen/JSBin embeds  -->
+
+```javascript
+function findElement(arr, func) {
+  let num = 0;
+  
+  for(var i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
+  
+  return undefined;
+}
+```
+
+## Code Explanation
+
+Challenge asks us to look through array. This is done using a for loop.
+The ```num``` variable is being passed into the function, so we set it to each index in our array.
+The pre-defined function already checks each number for us, so if it is "true", we return that num.
+If none of the numbers in the array pass the function's test, we return undefined.
